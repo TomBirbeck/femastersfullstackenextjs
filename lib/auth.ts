@@ -41,6 +41,5 @@ export const getUserFromCookie = async (cookies) => {
       id,
     },
   });
-  console.log(user)
   return user;
 };
