@@ -1,4 +1,4 @@
-export const fetcher = async ({ url, method, body, json = true }) => {
+const fetcher = async ({ url, method, body, json = true }) => {
   const res = await fetch(url, {
     method,
     ...(body && { body: JSON.stringify(body) }),
@@ -17,3 +17,13 @@ export const fetcher = async ({ url, method, body, json = true }) => {
     return data.data;
   }
 };
+
+const register = (user) => {
+  return fetcher({ url: '/api/register', method: 'post', body: user });
+};
+
+const signin = (user) => {
+  return fetcher({ url: '/api/signin', method: 'post', body: user });
+};
+
+export { signin, register, fetcher };
