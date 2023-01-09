@@ -29,3 +29,16 @@ export const validateJWT = async (jwt) => {
 
   return payload.payload as any;
 };
+
+export const getUserFromCookie = async (cookies) => {
+  const jwt = cookies.get(process.env.COOKIE_NAME);
+
+  const { id } = await validateJWT(jwt);
+
+  const user = await db.user.findUnique({
+    where: {
+      id,
+    },
+  });
+  return user;
+};
