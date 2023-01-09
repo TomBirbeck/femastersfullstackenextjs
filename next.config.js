@@ -4,6 +4,10 @@ const nextConfig = {
     appDir: true,
     serverComponentsExternalPackages: ['bcrypt'],
   },
+  // webpack(config) {
+  //   config.experiments = { ...config.experiments, topLevelAwait: true }
+  //   return config
+  // }
 };
 
 module.exports = nextConfig;

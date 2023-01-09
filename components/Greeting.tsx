@@ -3,6 +3,7 @@ import { cookies } from "next/headers";
 import Button from "./Button";
 import Card from "./Card";
 import { delay } from "@/lib/delay";
+import React from "react";
 
 const getData = async () => {
     await delay(5000);
