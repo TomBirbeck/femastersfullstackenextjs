@@ -17,12 +17,14 @@ const links = [
 ];
 
 const Sidebar = () => {
-  <Card className='h-full w-40 flex items-center justify-between flex-wrap'>
+  return (
+    <Card className='h-full w-40 flex items-center justify-between flex-wrap'>
     <div className='w-full flex justify-center items-center'></div>
     {links.map((link) => (
       <SidebarLink link={link} />
     ))}
-  </Card>;
+  </Card>
+  )
 };
 
 export default Sidebar;
