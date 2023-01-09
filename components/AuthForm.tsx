@@ -38,8 +38,8 @@ const AuthForm = ({ mode }: { mode: 'register' | 'signin' }) => {
       await signin(formState);
     }
 
+    router.push('/home');
     setFormState(intial);
-    router.replace('/home');
   };
 
   const content = mode === 'register' ? registerContent : signinContent;
