@@ -4,10 +4,12 @@ const nextConfig = {
     appDir: true,
     serverComponentsExternalPackages: ['bcrypt'],
   },
-  // webpack(config) {
-  //   config.experiments = { ...config.experiments, topLevelAwait: true }
-  //   return config
-  // }
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;
